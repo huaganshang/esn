@@ -8,6 +8,8 @@ const APP_PATH = path.resolve(__dirname, '../');
 const APP_SRC = path.join(APP_PATH, '/src');
 const APP_DIST = path.join(APP_PATH, '/dist');
 
+console.log(process.env.NODE_ENV, 1111111111, JSON.stringify(process.env.NODE_ENV));
+
 module.exports = {
     devtool: '#eval-source-map',
     entry: {
