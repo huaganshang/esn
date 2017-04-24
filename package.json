@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node ./webpack/dev.js",
-    "test": "cross-env NODE_ENV=test webpack --config ./webpack/test.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack/build.js"
+    "test": "rm -rf dist && cross-env NODE_ENV=test webpack --config ./webpack/test.js",
+    "prevProduction": "rm -rf dist && cross-env NODE_ENV=test webpack --config ./webpack/prevProduction.js",
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config ./webpack/build.js"
   },
   "author": "",
   "license": "ISC",

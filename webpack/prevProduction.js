@@ -7,4 +7,6 @@ config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({minimize: true})
 );
 
-module.exports = merge(config, {});
+module.exports = merge(config, {
+    devtool: false
+});
