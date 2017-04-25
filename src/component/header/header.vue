@@ -4,9 +4,9 @@
     height: 90px;
     display: flex;
     background: #24292e;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 30px;
     font-size: 14px;
 }
 .item{
@@ -17,17 +17,14 @@
 }
 .center{
     flex: 2;
+    width:100%;
     text-align: center;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 .right{
     text-align: right;
-}
-.item a{
-    color: #fff;
-    text-decoration: none;
 }
 [data-dpr='2'] *{
     font-size: 24px;
@@ -43,16 +40,25 @@
             <slot name="left"></slot>
         </div>
         <div class="item center">
-            <slot name="center"></slot>
+            <slot name="center">
+                <span v-text="title"></span>
+            </slot>
         </div>
         <div class="item right">
-            <slot name="right"></slot>
+            <slot name="right">
+
+            </slot>
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    props: {
+        title: {
+            default: '标题'
+        },
+    },
     data(){
         return {
 

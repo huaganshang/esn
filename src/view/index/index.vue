@@ -1,6 +1,5 @@
 <style scoped lang="postcss">
 .selector{
-    width: 375px;
     height: 64px;
     font-size: 28px;
     border: 1px solid #ddd;
@@ -12,9 +11,8 @@
 
 <template>
     <div>
-        <app-header title="登录">
-            <router-link slot="left" to="/">返回</router-link>
-            <h1 slot="center">日志日志日志日志日志日志</h1>
+        <app-header title="审批">
+            <div slot="left">返回</div>
             <div slot="right">...</div>
         </app-header>
         <div class="selector">
@@ -24,7 +22,7 @@
 </template>
 
 <script>
-import header from 'app_component/header';
+import AppHeader from 'app_component/header/header';
 export default {
     data() {
         return {
@@ -32,7 +30,7 @@ export default {
         }
     },
     components:{
-        'app-header' : header
+        AppHeader,
     }
 };
 </script>
