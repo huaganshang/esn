@@ -12,11 +12,11 @@
 
 <template>
     <div>
-        <common-header title="登录">
+        <app-header title="登录">
             <router-link slot="left" to="/">返回</router-link>
             <h1 slot="center">日志日志日志日志日志日志</h1>
             <div slot="right">...</div>
-        </common-header>
+        </app-header>
         <div class="selector">
             {{msg}}
         </div>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import header from 'YY_component/header';
+import header from 'app_component/header';
 export default {
     data() {
         return {
@@ -32,7 +32,7 @@ export default {
         }
     },
     components:{
-        'common-header' : header
+        'app-header' : header
     }
 };
 </script>

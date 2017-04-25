@@ -28,9 +28,9 @@ module.exports = {
     resolve: {
         alias: {
             vue: 'vue/dist/vue.js',
-            src: APP_SRC,
-            YY_component: 'src/component',
-            YY_view: 'src/view',
+            app_src: APP_SRC,
+            app_component: 'app_src/component',
+            app_view: 'app_src/view',
         },
         extensions: ['.js', '.json', '.vue', '.scss', '.css']
     },
