@@ -4,7 +4,7 @@ import store from './store/';
 import routes from './router/';
 import axios from 'axios';
 import http from './config/http';
-import './style/css/normalize';
+import './style/css/reset';
 
 Vue.use(VueRouter);
 const router = new VueRouter({

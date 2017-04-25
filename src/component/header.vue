@@ -1,19 +1,13 @@
 <style scope lang="postcss">
-[data-dpr="2"] * {
-    font-size: 24px;
-}
-[data-dpr="3"] * {
-    font-size: 36px;
-}
 .header{
     color: #fff;
-    height: 90px;
+    height: .9rem;
     display:flex;
-    font-size: 14px;
     background: #24292e;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 .10rem;
+    font-size: 14px;
 }
 .item{
     flex: 1;
@@ -30,6 +24,7 @@
 }
 .item a{
     color: #fff;
+    text-decoration: none;
 }
 </style>
 
