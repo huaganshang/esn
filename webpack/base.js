@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const px2rem = require('postcss-px2rem');
 
 const APP_PATH = path.resolve(__dirname, '../');
 const APP_SRC = path.join(APP_PATH, '/src');
@@ -80,7 +81,7 @@ module.exports = {
                 removeComments: true,
                 collapseWhitespace: true,
             },
-            favicon: path.join(APP_SRC, '/asset/ico.ico'),
+            favicon: path.join(APP_SRC, '/asset/images/ico.ico'),
             template: path.join(APP_SRC, '/template/index.html'),
         }),
         new webpack.DefinePlugin({
@@ -89,7 +90,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: function () {
-                    return [autoprefixer({
+                    return [px2rem({remUnit: 75}), autoprefixer({
                         browsers: [
                             "> 1%",
                             "last 2 versions",

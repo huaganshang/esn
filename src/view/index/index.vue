@@ -14,6 +14,8 @@
     <div>
         <common-header title="登录">
             <router-link slot="left" to="/">返回</router-link>
+            <h1 slot="center">日志日志日志日志日志日志</h1>
+            <div slot="right">...</div>
         </common-header>
         <div class="selector">
             {{msg}}

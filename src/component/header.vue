@@ -1,12 +1,12 @@
 <style scope lang="postcss">
 .header{
     color: #fff;
-    height: .9rem;
-    display:flex;
+    height: 90px;
+    display: flex;
     background: #24292e;
     justify-content: center;
     align-items: center;
-    padding: 0 .10rem;
+    padding: 0 10px;
     font-size: 14px;
 }
 .item{
@@ -18,6 +18,9 @@
 .center{
     flex: 2;
     text-align: center;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .right{
     text-align: right;
@@ -26,18 +29,24 @@
     color: #fff;
     text-decoration: none;
 }
+[data-dpr='2'] *{
+    font-size: 24px;
+}
+[data-dpr='3'] *{
+    font-size: 36px;
+}
 </style>
 
 <template>
     <div class="header">
         <div class="item left">
-            <slot name="left">返回</slot>
+            <slot name="left"></slot>
         </div>
         <div class="item center">
-            <slot name="center">审批</slot>
+            <slot name="center"></slot>
         </div>
         <div class="item right">
-            <slot name="right">...</slot>
+            <slot name="right"></slot>
         </div>
     </div>
 </template>
