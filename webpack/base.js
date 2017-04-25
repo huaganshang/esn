@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const autoprefixer = require('autoprefixer');
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const px2rem = require('postcss-px2rem');
 
 const APP_PATH = path.resolve(__dirname, '../');
 const APP_SRC = path.join(APP_PATH, '/src');
@@ -95,7 +96,7 @@ module.exports = {
                             "last 2 versions",
                             "not ie <= 8"
                         ]
-                    })];
+                    }), px2rem({remUnit: 75})];
                 },
             }
         }),
