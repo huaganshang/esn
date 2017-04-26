@@ -26,6 +26,9 @@
 .right{
     text-align: right;
 }
+.header-close{
+    padding-left: 10px;
+}
 [data-dpr='2'] *{
     font-size: 24px;
 }
@@ -45,9 +48,7 @@
             </slot>
         </div>
         <div class="item right">
-            <slot name="right">
-
-            </slot>
+            <slot name="right"></slot>
         </div>
     </div>
 </template>
@@ -64,12 +65,5 @@ export default {
 
         }
     },
-    mounted(){
-        this.$http.get('https://api.growingio.com/v2/9b676ca07803bdc0/web/pv').then(function(res){
-            // console.log(11, res);
-        }).catch(function(error){
-            // console.log(22, error);
-        });
-    }
 };
 </script>

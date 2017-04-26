@@ -1,36 +1,28 @@
 <style scoped lang="postcss">
-.selector{
-    height: 64px;
-    font-size: 28px;
+div{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
     border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: flex;
     border-radius: 4px;
 }
 </style>
 
 <template>
     <div>
-        <app-header title="审批">
-            <div slot="left">返回</div>
-            <div slot="right">...</div>
-        </app-header>
-        <div class="selector">
-            {{msg}}
-        </div>
+        <router-link to="detail">{{msg}}</router-link>
     </div>
 </template>
 
 <script>
-import AppHeader from 'app_component/header/header';
 export default {
     data() {
         return {
-            msg: 'hello'
+            msg: '点击我跳转'
         }
     },
-    components:{
-        AppHeader,
+    mounted(){
+        //
     }
 };
 </script>

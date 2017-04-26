@@ -47,7 +47,11 @@ module.exports = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: 'fonts/[name].[hash].[ext]'
+                }
             },
             {
                 test: /\.css$/,
@@ -85,7 +89,7 @@ module.exports = {
             template: path.join(APP_SRC, '/template/index.html'),
         }),
         new webpack.DefinePlugin({
-            __ENV__: JSON.stringify(process.env.NODE_ENV)
+            __ENV__: JSON.stringify(process.env.NODE_ENV),
         }),
         new webpack.LoaderOptionsPlugin({
             options: {
