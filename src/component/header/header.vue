@@ -1,4 +1,4 @@
-<style scope lang="postcss">
+<style scoped lang="postcss">
 .header{
     color: #fff;
     height: 90px;
