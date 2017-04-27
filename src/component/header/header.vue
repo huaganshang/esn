@@ -1,3 +1,34 @@
+<template>
+    <div class="header">
+        <div class="item left">
+            <slot name="left"></slot>
+        </div>
+        <div class="item center">
+            <slot name="center">
+                <span v-text="title"></span>
+            </slot>
+        </div>
+        <div class="item right">
+            <slot name="right"></slot>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        title: {
+            default: '标题'
+        },
+    },
+    data(){
+        return {
+
+        }
+    },
+};
+</script>
+
 <style scoped lang="postcss">
 .header{
     color: #fff;
@@ -29,41 +60,4 @@
 .header-close{
     padding-left: 10px;
 }
-[data-dpr='2'] *{
-    font-size: 24px;
-}
-[data-dpr='3'] *{
-    font-size: 36px;
-}
 </style>
-
-<template>
-    <div class="header">
-        <div class="item left">
-            <slot name="left"></slot>
-        </div>
-        <div class="item center">
-            <slot name="center">
-                <span v-text="title"></span>
-            </slot>
-        </div>
-        <div class="item right">
-            <slot name="right"></slot>
-        </div>
-    </div>
-</template>
-
-<script>
-export default {
-    props: {
-        title: {
-            default: '标题'
-        },
-    },
-    data(){
-        return {
-
-        }
-    },
-};
-</script>

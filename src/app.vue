@@ -1,5 +1,14 @@
-<style scoped>
-
+<style>
+html{
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+    font-smoothing: antialiased;
+}
+[data-dpr="2"] *{
+    font-size: 24px;
+}
+[data-dpr="3"] *{
+    font-size: 36px;
+}
 </style>
 
 <template>
